@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  font-family:'Montserrat', Arial;
+  font-weight: 950;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header.header {
+  display: flex;
+  align-items: center;
+}
+
+header.header img {
+  width: 130px;
+}
+
+section.top-page {
+  background: url("../image/imageAcceuil.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+.big-title{
+  color: white;
+  font-size: 80px;
+  padding: 20px 50px;
+}
+
+/* menu de naviguation */
+
+nav.nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: 100px;
+  width : 600px
+}
+
+nav.nav li {
+  color:white;
+}
+
+/* icons */
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px
+}
+
+.icons-item{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  
+  
+}
+.delivery-icon:before {
+  font-size: 50px;
+  color: blue;
+  margin-left: 0px;
+}
+
+/* Section Projets et réalisations */
+
+.section-Projets{
+  font-size: 50px;
+  font-family:'Montserrat', Arial;
+  font-weight: 200;
+  position: relative;
+}
+.section-Projets:before{
+  content: "";
+  position:absolute;
+  background-color:blue ;
+  width: 540px;
+  height: 5px;
+  bottom: 0;
+}
+
+.LesProjets{
+  margin: 100px;
+}
+
+.mesProjets{
+  background-color: brown;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projet{ 
+  position:relative;
+  background-size: cover;
+  background-position: center;
+  min-width: 350px;
+  height: 500px;
+  flex: 1;
+}
+
+.P1{
+  background-image: url(../image/LesProjets/1.jpg);
+}
+
+.P2{
+  background-image: url(../image/LesProjets/2.jpg);
+}
+
+.P3{
+  background-image: url(../image/LesProjets/3.jpg);
+}
+
+.P4{
+  background-image: url(../image/LesProjets/4.jpg);
+}
+
+.projet-details{
+  position:absolute;
+  width: 100%;
+  bottom: 0;
+  background-color:#FFFFFFDF ;
+  padding: 5px 20px;
+}
+.projet-name{
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 10px;
+}
