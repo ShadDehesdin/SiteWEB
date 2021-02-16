@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-*{
-  font-family:'Montserrat', Arial;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+  font-family: 'Oswald';
   font-weight: 950;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,28 +23,76 @@ header.header img {
 }
 
 section.top-page {
-  background: url("../image/imageAcceuil.jpg");
-  background-size: cover;
+  background: url("../image/fond2 reverse.jpg");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 80vh;
+  opacity: 90%;
 }
-.big-title{
-  color: white;
-  font-size: 80px;
-  padding: 20px 50px;
+
+.big-title {
+  color: #868686;
+  font-size: 90px;
+  padding: 50px 120px;
+  /* transform: rotate(-10deg); */
+  text-shadow: 0px 0px 0 rgb(65,65,65),
+                 -1px 1px 0 rgb(23,23,23),
+                 -2px 2px 0 rgb(-19,-19,0),
+                 -3px 3px 0 rgb(-61,-61,0),
+                 -4px 4px  0 rgb(-103,-103,0),
+                 -5px 5px 4px rgba(0,0,0,1),
+                 -5px 5px 1px rgba(0,0,0,0.5),
+                 0px 0px 4px rgba(0,0,0,.2);
+  
 }
+
+
 
 /* menu de naviguation */
 
 nav.nav {
-  display: flex;
-  justify-content: space-between;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  margin-top: 0;
+
+  /* justify-content: space-between;
   list-style: none;
   margin-left: 100px;
-  width : 600px
+  width: 600px */
 }
 
 nav.nav li {
-  color:white;
+  display: table-cell;
+  width: 180px;
+  transition: 1s;
+  /* color: white;
+  text-decoration: none; */
+}
+
+nav.nav li:hover{
+  width: 190px;
+  transition: 1s;
+}
+
+nav.nav a{
+  display: block;
+  line-height: 50px;
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 2);
+}
+
+#fondmenu{
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(hsl(0, 0%, 41%), #9e9e9e);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow:0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+  
 }
 
 /* icons */
@@ -47,53 +100,60 @@ nav.nav li {
 .icons {
   display: flex;
   justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+
 }
 
-.icons-item{
-  display:flex;
+.icons-item a {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  
-  
+  text-decoration: none;
 }
+
 .delivery-icon:before {
   font-size: 50px;
-  color: blue;
+  color: rgb(92, 92, 92);
   margin-left: 0px;
 }
 
+
+
+
 /* Section Projets et réalisations */
 
-.section-Projets{
+.section-Projets {
   font-size: 50px;
-  font-family:'Montserrat', Arial;
+  font-family: 'Montserrat', Arial;
   font-weight: 200;
   position: relative;
 }
-.section-Projets:before{
+
+.section-Projets:before {
   content: "";
-  position:absolute;
-  background-color:blue ;
+  position: absolute;
+  background-color: rgb(70, 70, 70);
   width: 540px;
   height: 5px;
   bottom: 0;
 }
 
-.LesProjets{
-  margin: 100px;
+.LesProjets {
+  margin: 30px;
 }
 
-.mesProjets{
+.mesProjets {
   background-color: brown;
   min-height: 500px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.projet{ 
-  position:relative;
+.projet {
+  position: relative;
   background-size: cover;
   background-position: center;
   min-width: 350px;
@@ -101,31 +161,69 @@ nav.nav li {
   flex: 1;
 }
 
-.P1{
+.P1 {
   background-image: url(../image/LesProjets/1.jpg);
 }
 
-.P2{
+.P2 {
   background-image: url(../image/LesProjets/2.jpg);
 }
 
-.P3{
+.P3 {
   background-image: url(../image/LesProjets/3.jpg);
 }
 
-.P4{
+.P4 {
   background-image: url(../image/LesProjets/4.jpg);
 }
 
-.projet-details{
-  position:absolute;
+.projet-details {
+  position: absolute;
   width: 100%;
   bottom: 0;
-  background-color:#FFFFFFDF ;
+  background-color: #FFFFFFDF;
   padding: 5px 20px;
 }
-.projet-name{
+
+.projet-name {
   font-size: 23px;
   font-weight: 700;
   line-height: 10px;
+}
+
+footer {
+  margin: 20px 20px;
+}
+
+/* bouton */
+
+button {
+  display: block;
+  float: right;
+  height: 30px;
+  width: 100px;
+  margin-right: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-family: monospace;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px 4px rgb(0 0 0 / 20%);
+  outline: none;
+  background-color: blue;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0px;
+}
+
+button:hover {
+  box-shadow: 6px 6px 25px 4px rgb(0 0 0 / 18%);
+  transform: scale(1.05);
+}
+
+button:active {
+  box-shadow: 6px 6px 18px 2px rgb(0 0 0 / 23%);
+  transform: scale(0.96);
 }
